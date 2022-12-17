@@ -33,19 +33,31 @@ def corn(call):
         ban2 = types.InlineKeyboardButton('Сколько раз ебали маму Вани?', callback_data='сам2')
         ban3 = types.InlineKeyboardButton("Сколько раз мама Вани лично сосала у Тимофей?", callback_data='сам3')
         markup.add(ban, ban2, ban3)
-        bot.send_message(call.message.chat.id, 'я ебу?',reply_markup= markup )
-    elif call.data =='сам':
-     bot.send_message(call.message.chat.id, 'сам иди противная пиздопроебина',callback_data='question_2', reply_markup=markup)
+        bot.send_message(call.message.chat.id, 'меню',reply_markup= markup )
+
+    elif call.data =='сам2':
+     markup =  types.InlineKeyboardMarkup(row_width=2)
+     
+     back =  types.InlineKeyboardButton('назад', callback_data='question_1')
+     markup.add(back)
+
+     bot.send_message(call.message.chat.id, 'сам иди противная пиздопроебина', reply_markup=markup)
+
     elif call.data == 'question_2':
      bot.send_message(call.message.chat.id, 'Сверх много',callback_data='сам2' , reply_markup=markup)
+
     elif call.data =='сам2':
      bot.send_message(call.message.chat.id, 'Такого числа еще даже не придумали', callback_data='сам3', reply_markup=markup)
+
     elif call.data =='сам3':
      bot.send_message(call.message.chat.id, '1000-7 раз', reply_markup=markup)
+
     elif call.data == 'question_2':
      bot.send_message(call.message.chat.id, 'Назад', reply_markup=markup )
+
     elif call.data == 'сам2':
      bot.send_message(call.message.chat.id, 'Назад',  reply_markup=markup)
+
     elif call.data == 'сам3':
      bot.send_message(call.message.chat.id, 'Назад', reply_markup=markup )
 
