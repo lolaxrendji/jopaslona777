@@ -35,32 +35,33 @@ def corn(call):
         markup.add(ban, ban2, ban3)
         bot.send_message(call.message.chat.id, 'меню',reply_markup= markup )
 
-    elif call.data =='сам2':
-     markup =  types.InlineKeyboardMarkup(row_width=2)
-     
-     back =  types.InlineKeyboardButton('назад', callback_data='question_1')
-     markup.add(back)
+     elif call.data =='сам':
+      markup =  types.InlineKeyboardMarkup(row_width=2)
+      back =  types.InlineKeyboardButton('назад', callback_data='question_1')
+      markup.add(back)
 
-     bot.send_message(call.message.chat.id, 'сам иди противная пиздопроебина', reply_markup=markup)
+      bot.send_message(call.message.chat.id, 'сам иди противная пиздопроебина', reply_markup=markup)
 
-    elif call.data == 'question_2':
-     bot.send_message(call.message.chat.id, 'Сверх много',callback_data='сам2' , reply_markup=markup)
+     elif call.data == 'question_2':
+      markup =  types.InlineKeyboardMarkup(row_width=2)
+      back =  types.InlineKeyboardButton('назад', callback_data='question_1')
+      markup.add(back)
+      bot.send_message(call.message.chat.id, 'Сверх много', reply_markup=markup)
 
-    elif call.data =='сам2':
-     bot.send_message(call.message.chat.id, 'Такого числа еще даже не придумали', callback_data='сам3', reply_markup=markup)
+     elif call.data =='сам2':
+      bot.send_message(call.message.chat.id, 'Такого числа еще даже не придумали', callback_data='сам3', reply_markup=markup)
 
-    elif call.data =='сам3':
-     bot.send_message(call.message.chat.id, '1000-7 раз', reply_markup=markup)
+     elif call.data =='сам3':
+      bot.send_message(call.message.chat.id, '1000-7 раз', reply_markup=markup)
 
-    elif call.data == 'question_2':
-     bot.send_message(call.message.chat.id, 'Назад', reply_markup=markup )
+     elif call.data == 'question_2':
+      bot.send_message(call.message.chat.id, 'Назад', reply_markup=markup )
 
-    elif call.data == 'сам2':
-     bot.send_message(call.message.chat.id, 'Назад',  reply_markup=markup)
+     elif call.data == 'сам2':
+      bot.send_message(call.message.chat.id, 'Назад',  reply_markup=markup)
 
-    elif call.data == 'сам3':
-     bot.send_message(call.message.chat.id, 'Назад', reply_markup=markup )
-
+     elif call.data == 'сам3':
+      bot.send_message(call.message.chat.id, 'Назад', reply_markup=markup )
 
 
 
